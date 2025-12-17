@@ -1,0 +1,18 @@
+[package]
+name = "turso-compile-fail"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+candid = "0.10"
+ic-cdk = "0.19.0"
+ic-stable-structures = "0.7.2"
+turso_core = { git = "https://github.com/tursodatabase/turso", default-features = false }
+turso = { git = "https://github.com/tursodatabase/turso", default-features = false }
+uuid = { version = "1.19.0", default-features = false, features = ["rng-getrandom"] }
+tracing = "0.1.43"
+getrandom_03 = { version = "0.3", package = "getrandom" }
+getrandom_02 = { version = "0.2", package = "getrandom", features = ["custom"] }
+
+[patch.crates-io]
+chrono = { git = "https://github.com/ranile/chrono", branch = "icp" }
